@@ -57,9 +57,10 @@
                               <Insets bottom="40.0" left="40.0" right="40.0" top="10.0" />
                            </VBox.margin>
                         </Button>
+                        <Label fx:id="labelElements" text="Label" />
                         <Label fx:id="labelSort" text="Algorytm sortowania">
                            <VBox.margin>
-                              <Insets top="50.0" />
+                              <Insets top="35.0" />
                            </VBox.margin>
                         </Label>
                         <ComboBox fx:id="comboSort" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" VBox.vgrow="ALWAYS">

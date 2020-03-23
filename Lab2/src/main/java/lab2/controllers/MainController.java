@@ -53,6 +53,9 @@ public class MainController {
 
     @FXML
     private Button buttonAdd;
+    
+    @FXML
+    private Label labelElements;
 
     @FXML
     private Label labelSort;
@@ -105,7 +108,20 @@ public class MainController {
     		if(e.getValue() != (int)e.getValue())
     			allInt = false;
     		listView.getItems().add(e.getName() + " : " + decimalFormat.format(e.getValue()));
-    	}    	
+    	}
+    	if(list.size() == 1)
+    		labelElements.setText(list.size() + " " + bundle.getString("one"));
+    	else {
+	    	switch(list.size()%10) {
+	    		case 2:
+	    		case 3:
+	    		case 4:
+	    			labelElements.setText(list.size() + " " + bundle.getString("two"));
+	    			break;
+	    		default:
+	    			labelElements.setText(list.size() + " " + bundle.getString("more"));
+	    	}
+    	}
     }
     
     private void changeLanguage(String lang, String country) {
@@ -136,6 +152,7 @@ public class MainController {
 		comboSort.getSelectionModel().select(0);
 		
 		changeLanguage("pl", "PL");
+		repairView();
     }
 
     @FXML
