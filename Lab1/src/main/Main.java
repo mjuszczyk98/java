@@ -44,7 +44,7 @@ public class Main {
 		
 		List<IElement> resultCountingFloat1 = insertFloat.solve2(floatList1);
 		
-		System.out.println("\nLista infloatt po insert sort: ");
+		System.out.println("\nLista float po insert sort: ");
 		for(int i = 0; i < resultCountingFloat1.size(); i++)
 			System.out.println(resultCountingFloat1.get(i).getName()+": "+resultCountingFloat1.get(i).getValue());
 
@@ -54,17 +54,17 @@ public class Main {
 		MergeFloatSorter mergeSort = new MergeFloatSorter();
 
 		for(int i = 0; i < 20; i ++)
-			floatList2.add(new FloatElement(Integer.toString(i) , (float)Math.random()*1000));
+			floatList2.add(new IntElement(Integer.toString(i) , (int)(Math.random()*1000)));
 		
-		System.out.println("Lista float przed insert sort: ");
+		System.out.println("Lista float przed merge sort: ");
 		for(int i = 0; i < floatList2.size(); i++)
 			System.out.println(floatList2.get(i).getValue());
 		
 		List<IElement> resultCountingFloat2 = mergeSort.solve2(floatList2);
 		
-		System.out.println("\nLista infloatt po insert sort: ");
+		System.out.println("\nLista float po merge sort: ");
 		for(int i = 0; i < resultCountingFloat2.size(); i++)
-			System.out.println(resultCountingFloat2.get(i).getName()+": "+resultCountingFloat1.get(i).getValue());
+			System.out.println(resultCountingFloat2.get(i).getName()+": "+resultCountingFloat2.get(i).getValue());
 	}
 }
 
