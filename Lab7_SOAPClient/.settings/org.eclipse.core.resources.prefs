@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/soap/TCPSender.java=UTF-8
+encoding//src/soap/TCPSenderService.java=UTF-8
+encoding//src/soap/TCPSenderServiceLocator.java=UTF-8
+encoding//src/soap/TCPSenderSoapBindingStub.java=UTF-8

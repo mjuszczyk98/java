@@ -32,26 +32,30 @@
                               <Insets bottom="15.0" left="30.0" right="30.0" top="5.0" />
                            </VBox.margin>
                         </TextField>
-                        <Button mnemonicParsing="false" onAction="#onSelectClikc" text="Select">
-                           <VBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </VBox.margin>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#onInsertClick" text="Insert">
-                           <VBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </VBox.margin>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#onUpdateClick" text="Upadte">
-                           <VBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </VBox.margin>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#onDeleteClick" text="Delete">
-                           <VBox.margin>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </VBox.margin>
-                        </Button>
+                        <HBox prefHeight="30.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#onSelectClikc" text="Select">
+                                 <HBox.margin>
+                                    <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#onInsertClick" text="Insert">
+                                 <HBox.margin>
+                                    <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#onUpdateClick" text="Upadte">
+                                 <HBox.margin>
+                                    <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#onDeleteClick" text="Delete">
+                                 <HBox.margin>
+                                    <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
                         <Label fx:id="labelError" textFill="RED">
                            <VBox.margin>
                               <Insets top="30.0" />
@@ -59,6 +63,28 @@
                            <font>
                               <Font name="System Bold" size="15.0" />
                            </font>
+                        </Label>
+                        <HBox prefHeight="30.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#marshallOnAction" text="Marshall">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="40.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#unmarshalOnAction" text="Unmarshall">
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="30.0" right="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Label fx:id="labelMarshall">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
                         </Label>
                      </children>
                   </VBox>
