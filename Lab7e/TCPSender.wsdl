@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://soap" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://soap" xmlns:intf="http://soap" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://soap" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="remove">
+    <complexType>
+     <sequence>
+      <element name="port" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeResponse">
+    <complexType/>
+   </element>
+   <element name="register">
+    <complexType>
+     <sequence>
+      <element name="port" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="registerResponse">
+    <complexType>
+     <sequence>
+      <element name="registerReturn" type="xsd:boolean"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getNextStep">
+    <complexType>
+     <sequence>
+      <element name="port" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getNextStepResponse">
+    <complexType>
+     <sequence>
+      <element name="getNextStepReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="registerResponse">
+
+      <wsdl:part element="impl:registerResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getNextStepRequest">
+
+      <wsdl:part element="impl:getNextStep" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="registerRequest">
+
+      <wsdl:part element="impl:register" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getNextStepResponse">
+
+      <wsdl:part element="impl:getNextStepResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeRequest">
+
+      <wsdl:part element="impl:remove" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeResponse">
+
+      <wsdl:part element="impl:removeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="TCPSender">
+
+      <wsdl:operation name="remove">
+
+         <wsdl:input message="impl:removeRequest" name="removeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:removeResponse" name="removeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="register">
+
+         <wsdl:input message="impl:registerRequest" name="registerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:registerResponse" name="registerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getNextStep">
+
+         <wsdl:input message="impl:getNextStepRequest" name="getNextStepRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getNextStepResponse" name="getNextStepResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="TCPSenderSoapBinding" type="impl:TCPSender">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="remove">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="register">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="registerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="registerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getNextStep">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getNextStepRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getNextStepResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="TCPSenderService">
+
+      <wsdl:port binding="impl:TCPSenderSoapBinding" name="TCPSender">
+
+         <wsdlsoap:address location="http://localhost:8080/Lab7_SOAP/services/TCPSender"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
