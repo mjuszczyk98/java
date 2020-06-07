@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0+" codebase="http://localhost:8080/lab9" href="lab9.jnlp">
+        <information>
+                <title>Power 2 App</title>
+                <vendor>Michal Juszczyk</vendor>
+                <homepage href="http://localhost:8080" />
+                <description>Application to count second power of given number</description>
+        </information>
+        <security>
+                <all-permissions/>
+        </security>
+        <resources>
+                <j2se version="1.8+" />
+                <jar href="lab9.jar" />
+        </resources>
+        <application-desc main-class="main.Power" />
+</jnlp>
