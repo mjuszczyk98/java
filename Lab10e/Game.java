@@ -74,11 +74,6 @@ public class Game {
 				move = scanner.nextInt();
 				if(move == -1) {
 					workOnC = !workOnC;
-					if(workOnC) {
-						System.out.println("Works on C");
-					} else {
-						System.out.println("Works on JS");
-					}
 					continue;
 				}
 				if(!move(player, move)) {
